@@ -23,12 +23,12 @@ Pathfinder::~Pathfinder() {}
 * Returns:		string
 *				A single string representing the current maze
 */
-string Pathfinder::toString() const
+/*string Pathfinder::toString() const
 {
 
 
 
-}
+}*/
 
 /*
 * createRandomMaze
@@ -39,12 +39,12 @@ string Pathfinder::toString() const
 * in the entrance cell (0, 0, 0) and in the exit cell (4, 4, 4).  The generated maze may be
 * solvable or unsolvable, and this method should be able to produce both kinds of mazes.
 */
-void Pathfinder::createRandomMaze()
+/*void Pathfinder::createRandomMaze()
 {
 
 
 
-}
+}*/
 //-----------------------------------------------------------------------------------------
 
 //Part 2-----------------------------------------------------------------------------------
@@ -65,7 +65,35 @@ void Pathfinder::createRandomMaze()
 bool Pathfinder::importMaze(string file_name)
 {
 
+    ifstream inputFile;
+    inputFile.open(file_name);
 
+    if(!inputFile)
+    {
+
+        cerr << "unable to open " << file_name << endl;
+        return 0;
+
+    }
+    else
+    {
+
+        int currentInt;
+        stringstream ss;
+
+        while(!inputFile.eof())
+        {
+
+            inputFile >> currentInt;
+            ss << currentInt;
+
+            cout << currentInt;
+
+        }
+
+        return 1;
+
+    }
 
 }
 //-----------------------------------------------------------------------------------------
@@ -88,9 +116,9 @@ bool Pathfinder::importMaze(string file_name)
 * Returns:		vector<string>
 *				A solution to the current maze, or an empty vector if none exists
 */
-vector<string> Pathfinder::solveMaze()
+/*vector<string> Pathfinder::solveMaze()
 {
 
 
 
-}
+}*/

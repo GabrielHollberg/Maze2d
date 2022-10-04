@@ -33,7 +33,7 @@ public:
 	* Returns:		string
 	*				A single string representing the current maze
 	*/
-	virtual string toString() const = 0;
+	//virtual string toString() const = 0;
 
 	/*
 	* createRandomMaze
@@ -44,7 +44,7 @@ public:
 	* in the entrance cell (0, 0, 0) and in the exit cell (4, 4, 4).  The generated maze may be
 	* solvable or unsolvable, and this method should be able to produce both kinds of mazes.
 	*/
-	virtual void createRandomMaze() = 0;
+	//virtual void createRandomMaze() = 0;
 	//-----------------------------------------------------------------------------------------
 
 	//Part 2-----------------------------------------------------------------------------------
@@ -83,6 +83,6 @@ public:
 	* Returns:		vector<string>
 	*				A solution to the current maze, or an empty vector if none exists
 	*/
-	virtual vector<string> solveMaze() = 0;
+	//virtual vector<string> solveMaze() = 0;
 	//-----------------------------------------------------------------------------------------
 };
