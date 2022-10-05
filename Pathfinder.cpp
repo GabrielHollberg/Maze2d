@@ -23,12 +23,26 @@ Pathfinder::~Pathfinder() {}
 * Returns:		string
 *				A single string representing the current maze
 */
-/*string Pathfinder::toString() const
+string Pathfinder::toString() const
 {
 
+    string result;
 
+    for(size_t i = 0; i < 5; i++)
+    {
 
-}*/
+        for(size_t j = 0; j < 5; j++)
+        {
+
+            result += maze[i][j] + "\n";
+
+        }
+
+    }
+
+    return result;
+
+}
 
 /*
 * createRandomMaze
@@ -78,16 +92,47 @@ bool Pathfinder::importMaze(string file_name)
     else
     {
 
-        int currentInt;
-        stringstream ss;
+        int counti = 0;
+        int countj = 0;
 
         while(!inputFile.eof())
         {
 
-            inputFile >> currentInt;
-            ss << currentInt;
+            inputFile >> maze[counti][countj];
 
-            cout << currentInt;
+            if(maze[0][0] != 1)
+            {
+
+                cerr << "First value in maze is not 1" << endl;
+                return 0;
+
+            }
+
+            countj++;
+
+            if(countj > 4)
+            {
+
+                countj = 0;
+                counti++;
+
+                if(counti > 5)
+                {
+
+                    cerr << "Bad number of integers in file" << endl;
+                    return 0;
+
+                }
+
+            }
+
+        }
+
+        if(maze[4][4] != 1)
+        {
+
+            cerr << "First value in maze is not 1" << endl;
+            return 0;
 
         }
 

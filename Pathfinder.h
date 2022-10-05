@@ -3,7 +3,6 @@
 #include "PathfinderInterface.h"
 
 #include <fstream>
-#include <sstream>
 
 class Pathfinder: public PathfinderInterface
 {
@@ -31,7 +30,7 @@ public:
 	* Returns:		string
 	*				A single string representing the current maze
 	*/
-	//string toString() const;
+	string toString() const;
 
 	/*
 	* createRandomMaze

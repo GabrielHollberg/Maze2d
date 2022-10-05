@@ -9,6 +9,7 @@ int main() {
 
 	Pathfinder myPathfinder;
 	myPathfinder.importMaze("2d.txt");
+	cout << myPathfinder.toString();
 
 	/*Pathfinder* pathptr = NULL;//the Pathfinder
 	// Test 2D array
